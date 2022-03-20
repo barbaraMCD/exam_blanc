@@ -1,0 +1,46 @@
+@import url("home.css");
+
+.ecriture 
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    min-height: 100vh;
+}
+
+.nav-css 
+{
+    height: 15vh;
+    border-bottom: 0.5em solid black;
+    background-color: #ffffff;
+}
+
+.container-fluid > img
+{
+    height: 3em;
+}
+
+.brand 
+{
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.brand>*
+{
+    color: rgb(185, 184, 184);
+}
+
+main
+{
+    background-image: url("https://www.telerama.fr/sites/tr_master/files/styles/968x546/public/medias/2015/08/media_130294/le-lecteur-une-espece-menacee%2CM247786.jpg?itok=YVd5t2kY");
+    min-height: 85vh;
+    background-size: cover;
+}
+
+main > h1
+{
+    background-color: #ffffff;
+    border-radius: 2em;
+    max-width: 60%;
+    font-style: italic;
+
+}

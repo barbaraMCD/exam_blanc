@@ -1,0 +1,32 @@
+{% extends "base_visitor.html.twig" %}
+
+{% block title %} Modifies un livre {% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    {{ form_start(form) }}
+        <div class="form-group my-3 text-white">
+            <label for=""> Nom du livre </label>
+            {{ form_widget(form.nom, {'attr': {'class':'form-control'}}) }}
+        </div>
+        <div class="form-group my-3 text-white">
+            <label for="">Nom de l'auteur</label>
+            {{ form_widget(form.auteur, {'attr': {'class':'form-control'}} ) }}
+        </div>
+        <div class="form-group my-3 text-white">
+            <label for="">Avis</label>
+            {{ form_widget(form.avis, {'attr': {'class':'form-control'}} ) }}
+        </div>
+        <div class="form-group my-3 text-white">
+            <label for="">Note / 20 </label>
+            {{ form_widget(form.note, {'attr': {'class':'form-control'}} ) }}
+        </div>
+        <div>
+            <input type="submit" class="btn btn-success">
+        </div>
+
+
+    {{ form_end(form) }}
+</div>
+{% endblock %}

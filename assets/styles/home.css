@@ -1,0 +1,37 @@
+.btn-add
+{
+    border-radius: 100%;
+    height: 10em;
+    width: 10em;
+    border: 0.8rem solid white;
+    background-color: rgb(185, 184, 184);
+}
+.btn-add:hover {
+    transform: scale(0.9);
+    border: 0.8rem solid white;
+}
+
+.visitor-add-book
+{
+    min-height: 50vh;
+}
+
+.tableau-home {
+    border-radius: 1em;
+    box-shadow: 4px rgba(0, 0, 0, 0.5); 
+}
+.titres-t {
+    background-color: white;
+    font-family:'Allura';
+    font-size: 22px;
+}
+
+.in-tableau
+{
+    background-color: rgb(185, 184, 184);
+}
+
+.btn-tab
+{
+    border-radius: 1em;
+}

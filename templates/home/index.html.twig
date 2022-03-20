@@ -1,0 +1,40 @@
+{% extends 'base_visitor.html.twig' %}
+
+{% block content %}
+<div class="container-fluid d-flex flex-column my-3 justify-content-around align-items-center visitor-add-book">
+    
+    <a href=" {{ path('create') }} " class="btn ms-1 btn-add d-flex justify-content-center align-items-center"> Ajouter un livre </a>
+    <div class="table-responsive table-hover tableau-home my-3">
+        <table class="table table-hover table-center">
+            <thead>
+                <tr class="titres-t text-center">
+                    <th>Id </th>
+                    <th>Nom </th>
+                    <th>Auteur </th>
+                    <th>Avis </th>
+                    <th>Note </th>
+                    <th>Options </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for livres in livre %}
+                <tr class="in-tableau">
+                    <td> {{livres.id }} </td>
+                    <td> {{livres.nom }} </td>
+                    <td> {{livres.auteur }} </td>
+                    <td> {{livres.avis }} </td>
+                    <td class="text-white"> {{livres.note }} </td>
+                    <td>
+                        <a href="{{ path('edit', {"id" : livres.id}) }}" class="m-1 btn btn-sm btn-light btn-tab">Modifier</a>
+                        <form action="{{ path('delete.book', {"id" : livres.id}) }}" method="POST" class="m-1 d-inline">
+                            <input type="hidden" name="_token" value=" {{ csrf_token('delete' ~ livres.id) }}">
+                            <input type="submit" class="btn btn-sm btn-dark btn-tab" value="Supprimer" onclick="return confirm('confirmer la suppression?')">
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>       
+        </table>  
+    </div>
+</div>
+{% endblock %}
